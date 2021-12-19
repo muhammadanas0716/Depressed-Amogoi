@@ -1,0 +1,9 @@
+1. heroku login
+
+2. heroku git:remote -a school-assistant-discord-bot
+
+3. git add .
+
+4. git commit -am “make it better”
+
+5. git push heroku master
