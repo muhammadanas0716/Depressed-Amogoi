@@ -1,7 +1,7 @@
 Welcome to the server - Lorem Ipsum! Here I the bot of the server will help you as your school assistant.
 1. I can help you with the classwork, homework and even test reminders and help with many other things too,
-2. Our bot prefix is `!` so before running any command use the prefix first
+2. Our bot prefix is `depressed` so before running any command use the prefix first
 3. Talking of commands run `!commands` to see all available commands
 4. Please use the commands in their specific channels so everything stays organised
 
-Muhammad Anas
+Muhammad Anas, THE DEV - Enjoy your stay!!

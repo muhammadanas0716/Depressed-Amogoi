@@ -8,15 +8,16 @@ intents = discord.Intents.default()
 intents.members = True
 
 # Initializing client object and setting up command prefix, as well as GLOBAL VARIABLES
-client = commands.Bot(command_prefix="!", intents=intents)
+client = commands.Bot(command_prefix="depressed ", intents=intents)
 server = client.get_guild(892040212451041340)
-error_message = """You aren't an admin. If you are, you might have typed something incorrect. Contact <@814466820735631400> for details!"""
+error_message = """You aren't a DEPRESSED admin. If you are, you might have typed something incorrect. Contact <@814466820735631400> for details!"""
+owner = "<@814466820735631400>"
 
 
 # On Ready Command
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Game("School Amigo - !commands"))
+    await client.change_presence(status=discord.Status.online, activity=discord.Game("I am DEPRESSED and LONELY"))
     print("Bot OS ready to roll!")
 
 
@@ -32,12 +33,11 @@ async def on_member_join(member):
 
 # Show number of Users in Server
 @client.command()
-
 async def users(ctx):
     # Doesn't Include Bots
     true_member_count = len([m for m in ctx.guild.members if not m.bot])
     embed = discord.Embed(title="Member Count....",
-                          description=f"We have **{true_member_count}** users, excluding bots",
+                          description=f"We have **{true_member_count}** DEPRESSED users, excluding bots",
                           color=0x481C3C)
 
     await ctx.send(embed=embed)

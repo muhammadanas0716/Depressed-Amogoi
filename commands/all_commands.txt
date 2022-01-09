@@ -1,6 +1,6 @@
-**Below are the available commands for the bot, some are reserved for admin only, DM me if you want to try out the premium commands...**
+**Below are the available commands for the DEPRESSED bot, some are reserved for DEPRESSED admin(s) only, DM me if you want to try out the premium commands...**
 
-**BOT PREFIX:** `!`
+**BOT PREFIX:** `depresed`
 
 ** Casual Commands - available to everybody **
 `1. ping`, `2. rules`, `3. users`, `4. homework`, `5. classwork`
