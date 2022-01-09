@@ -1,54 +1,49 @@
 import discord
 from discord.ext import commands
-from main import error_message
-from main import client
-from main import owner
+from main import client, owner, admin_users, error_message
 
 class Admin(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    # Add Admin/ROLE Command
+
+    # Add admin Command
     @commands.command()
-    @commands.has_role("DEV")
-    async def give(self, ctx, member: discord.Member, role: discord.Role):
-        embed = discord.Embed(title="A new Admin Made.",
-                              description=f"""{str(member.mention)} has been made admin!
-                                You now have been admin and have access to admin commands like kick and ban!
-                                You also have access to private channels too! Contact {str(owner)} for further details.
-                                """, color=0x481C3C)
+    async def add(self, ctx, member: discord.Member):
+        if str(ctx.author) in admin_users:
+            if str(member) not in admin_users:
+                admin_users.append(str(member))
+                embed = discord.Embed(title="A new Admin Made.",
+                                      description=f"{str(member.mention)}, You have been made admin - "
+                                                  f"You now have access to other admin commands and perms. For further details DM {owner}",
+                                      color=0x481C3C)
+                await ctx.send(embed=embed)
+            else:
+                embed2 = discord.Embed(title="Error...", description=f"{str(member)} is already an admin",
+                                       color=0x481C3C)
+                await ctx.send(embed=embed2)
+        elif str(ctx.author) not in admin_users:
+            embed3 = discord.Embed(title="Error...", description=f"{ctx.author.mention} - You are not an admin. Contact {owner} for more futher details",
+                                   color=0x481C3C)
+            await ctx.send(embed=embed3)
 
-        await ctx.send(embed=embed)
-        await member.add_roles(role)
 
-    # Remove Admin/ROLE Error
-    @give.error
-    async def give_error(self, ctx, error):
-        embed = discord.Embed(title="Error!",
-                              description="You either ain't an admin or you missed the parameter of ROLE to be given.",
-                              colour=0x481C3C)
-        await ctx.send(embed=embed)
-
-
-    # Remove Admin/ROLE Command
+    # Remove admin command
     @commands.command()
-    @commands.has_role("DEV")
-    async def fire(self, ctx, member: discord.Member, role: discord.Role):
-        embed = discord.Embed(title="An Admin Removed.",
-                              description=f"""Oh! {str(member.mention)} has been removed as an admin
-                                You are no longer admin, contact <@814466820735631400> for more details!
-                                """,
-                              color=0x481C3C)
-        await ctx.send(embed=embed)
-        await member.remove_roles(role)
+    async def remove(self, ctx, member: discord.Member):
+        if str(ctx.author) in valid_users:
+            if str(member) in valid_users:
+                valid_users.remove(str(member))
+                embed = discord.Embed(title="An Admin Removed.",
+                                      description=f"Oh! {str(member.mention)} has been removed as an admin",
+                                      color=0x481C3C)
+                await ctx.send(embed=embed)
+            else:
+                embed2 = discord.Embed(title="Error.",
+                                       description=f"{str(member.mention)} was never an admin",
+                                       color=0x481C3C)
+                await ctx.send(embed=embed2)
 
-    # Remove Admin/ROLE Command (error)
-    @fire.error
-    async def fire_error(self, ctx, error):
-        embed = discord.Embed(title="Admin Error",
-                              description=error_message,
-                              colour=0x481C3C)
-        await ctx.send(embed=embed)
 
     @commands.command()
     @commands.has_role("DEV")

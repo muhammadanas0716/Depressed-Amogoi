@@ -8,10 +8,10 @@ intents = discord.Intents.default()
 intents.members = True
 
 # Initializing client object and setting up command prefix, as well as GLOBAL VARIABLES
-client = commands.Bot(command_prefix="depressed ", intents=intents)
-server = client.get_guild(892040212451041340)
+client = commands.Bot(command_prefix="dp ", intents=intents)
 error_message = """You aren't a DEPRESSED admin. If you are, you might have typed something incorrect. Contact <@814466820735631400> for details!"""
 owner = "<@814466820735631400>"
+admin_users = ["<@814466820735631400>"]
 
 
 # On Ready Command

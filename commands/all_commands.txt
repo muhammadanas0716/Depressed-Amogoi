@@ -1,6 +1,6 @@
 **Below are the available commands for the DEPRESSED bot, some are reserved for DEPRESSED admin(s) only, DM me if you want to try out the premium commands...**
 
-**BOT PREFIX:** `depresed`
+**BOT PREFIX:** `dp`
 
 ** Casual Commands - available to everybody **
 `1. ping`, `2. rules`, `3. users`, `4. homework`, `5. classwork`
@@ -8,7 +8,6 @@
 ** Mathematics Commands - available to everybody **
 `1. calc small_equation`,
 `2. trigonometry_symbol(sin, cos, tan etc.) number`
-`3. bintoden binary_number`, `4. dentobin decimal/denary_number`
 
 ** Administrator commands - only available to admins **
 `1. add @user`, `2. remove @user`, `3. kick @user`, `4. ban @user`, `5. unban @user`,
