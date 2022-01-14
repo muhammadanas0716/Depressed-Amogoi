@@ -1,6 +1,6 @@
 1. heroku login
 
-2. heroku git:remote -a school-assistant-discord-bot
+2. heroku git:remote -a amiga-de-la-escuela
 
 3. git add .
 

@@ -1,7 +1,6 @@
-import aiohttp
-import discord
+from main import color
+import requests, json, random, discord, aiohttp
 from discord.ext import commands
-import random
 
 
 class Meme(commands.Cog):
@@ -19,13 +18,24 @@ class Meme(commands.Cog):
                 await ctx.send(embed=embed)
 
 
+def get_quote():
+    response = requests.get(
+        "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,racist&type=single"
+    )
+    json_data = json.loads(response.text)
+    joke = json_data["joke"]
+    return joke
+
 
 class Joke(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-
-
+    @commands.command()
+    async def joke(self, ctx):
+        quote = get_quote()
+        embed = discord.Embed(title="Joke", description=f"{quote}", color=color)
+        await ctx.send(embed=embed)
 
 
 def setup(client):

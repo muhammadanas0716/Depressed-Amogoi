@@ -13,7 +13,7 @@ client.remove_command("help")
 error_message = """You aren't a DEPRESSED admin. If you are, you might have typed something incorrect. Contact <@814466820735631400> for further details!"""
 owner = "<@814466820735631400>"
 admin_users = ["<@814466820735631400>"]  # ME
-color = "0x481C3C"
+color = 0x481C3C
 
 
 # On Ready Command
@@ -33,7 +33,7 @@ async def on_member_join(member):
     print("Done")
 
 
-# Show number of Users in Server
+# Show Stats of server
 @client.command()
 async def stats(ctx):
     # Doesn't Include Bots
