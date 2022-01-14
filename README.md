@@ -1,5 +1,5 @@
 
-# Depressed Amigoi - A discord bot!
+# Depressed Amigoi - A depressing discord bot!
 
 A simple yet fasanting discord bot for school servers, with a ton of features. From mathematic conversions to adding reminders and updating classwork and homework at one place is more than great! The calculator and memer always now and then help!
 

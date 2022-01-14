@@ -16,4 +16,4 @@
 `1. add @user **(MAKE ADMIN)**`, `2. remove @user **(REMOVE ADMIN)**`, 
 `3. kick @user`, `4. ban @user [reason]`, `5. unban @user [reason]`,
 `6. clear NumberOfMessages`
-`7, update_homework **new_homework**` `8, update_classwork **new_classwork**`
+`7, update_homework **updated_homework**` `8, update_classwork **updated_classwork**`
