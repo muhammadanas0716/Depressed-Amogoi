@@ -80,4 +80,4 @@ for filename in os.listdir("./cogs"):
         client.load_extension(f"cogs.{filename[:-3]}")
 
 # Run the Bot
-client.run("ODkwNDk4MjY2Nzg4MTYzNjE2.YUwrIw.E4T1xR5gHksPxqSPHLhNedNhjpc")
+client.run("ODkwNDk4MjY2Nzg4MTYzNjE2.YUwrIw.TzjSxoIqOWLKOfqGAIdOqSAMRPE")
