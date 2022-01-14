@@ -12,9 +12,9 @@ class Trignometry(commands.Cog):
         self.client = client
 
     @commands.command()
-    async def pi(self, ctx):
+    async def pi(self, ctx, decimal_places=2):
         pi_value = math.pi
-        await ctx.send(f"The value of **pi** rounded to 3 decimal places is as follows: `{pi_value.__round__(3)}`")
+        await ctx.send(f"The value of **pi** rounded to 3 decimal places is as follows: `{pi_value.__round__(decimal_places)}`")
 
     @commands.command()
     async def sin(self, ctx, num):

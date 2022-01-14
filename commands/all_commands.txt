@@ -9,7 +9,8 @@
 
 ** Mathematics Commands - available to everybody **
 `1. calc small_equation`,
-`2. trigonometry_symbol(sin, cos, tan etc.) number`
+`2. pi decimal_places`
+`3. trigonometry_symbol(sin, cos, tan etc.) number`
 
 ** Administrator commands - only available to admins **
 `1. add @user **(MAKE ADMIN)**`, `2. remove @user **(REMOVE ADMIN)**`, 
