@@ -4,6 +4,7 @@ import discord
 import numpy as np
 from discord.ext import commands
 from sympy import N
+from main import color
 
 
 class Trignometry(commands.Cog):
@@ -13,7 +14,7 @@ class Trignometry(commands.Cog):
     @commands.command()
     async def pi(self, ctx):
         pi_value = math.pi
-        await ctx.send(f"The value of **pi** rounded to 2 decimal places is as follows: `{pi_value.__round__(2)}`")
+        await ctx.send(f"The value of **pi** rounded to 3 decimal places is as follows: `{pi_value.__round__(3)}`")
 
     @commands.command()
     async def sin(self, ctx, num):
@@ -47,7 +48,7 @@ class Calc(commands.Cog):
     async def calc(self, ctx, arg):
         answer = N(arg)
         ans = np.format_float_positional(answer, trim='-')
-        embed = discord.Embed(title='{0} = {1}'.format(arg, ans), color=0x481C3C)
+        embed = discord.Embed(title='{0} = {1}'.format(arg, ans), color=color)
         await ctx.send(embed=embed)
 
 

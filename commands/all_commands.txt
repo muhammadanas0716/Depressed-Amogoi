@@ -3,12 +3,16 @@
 **BOT PREFIX:** `dp`
 
 ** Casual Commands - available to everybody **
-`1. ping`, `2. rules`, `3. users`, `4. homework`, `5. classwork`
+`1. ping`, `2. rules`, `3. stats`, 
+`4. homework`, `5. classwork`,
+`6. meme`, `7. joke`
 
 ** Mathematics Commands - available to everybody **
 `1. calc small_equation`,
 `2. trigonometry_symbol(sin, cos, tan etc.) number`
 
 ** Administrator commands - only available to admins **
-`1. add @user`, `2. remove @user`, `3. kick @user`, `4. ban @user`, `5. unban @user`,
-`6, update_homework new_homework` `6, update_classwork new_classwork`, `7. clear number_of_messages`
+`1. add @user **(MAKE ADMIN)**`, `2. remove @user **(REMOVE ADMIN)**`, 
+`3. kick @user`, `4. ban @user [reason]`, `5. unban @user [reason]`,
+`6. clear NumberOfMessages`
+`7, update_homework **new_homework**` `8, update_classwork **new_classwork**`

@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from main import error_message
+from main import error_message, color
 
 
 class Remove(commands.Cog):
@@ -14,14 +14,14 @@ class Remove(commands.Cog):
         await member.kick(reason=reason)
         embed = discord.Embed(title="A Member Kicked",
                               description=f"{str(member.mention)} has been kicked by {ctx.author.mention} \n Reason : {reason}",
-                              color=0x481C3C)
+                              color=color)
         await ctx.send(embed=embed)
 
     @kick.error
     async def kick_error(self, ctx, error):
         embed = discord.Embed(title="Admin Error",
                               description=error_message,
-                              colour=0x481C3C)
+                              colour=color)
         await ctx.send(embed=embed)
 
     # Ban Command
@@ -31,14 +31,14 @@ class Remove(commands.Cog):
         await member.ban(reason=reason)
         embed = discord.Embed(title="A Member Banned",
                               description=f"{member.mention} has been banned by {ctx.author.mention} \n Reason : {reason}",
-                              color=0x481C3C)
+                              color=color)
         await ctx.send(embed=embed)
 
     @ban.error
     async def ban_error(self, ctx, error):
         embed = discord.Embed(title="Admin Error",
                               description=error_message,
-                              colour=0x481C3C)
+                              colour=color)
         await ctx.send(embed=embed)
 
     # Unban Command
@@ -55,14 +55,14 @@ class Remove(commands.Cog):
                 await ctx.guild.unban(user)
                 embed = discord.Embed(title="A Member Banned",
                                       description=f"I have UNBANNED {user.mention}, you may invite him back!",
-                                      color=0x481C3C)
+                                      color=color)
                 await ctx.send(embed=embed)
 
     @unban.error
     async def unban_error(self, ctx, error):
         embed = discord.Embed(title="Admin Error",
                               description=error_message,
-                              colour=0x481C3C)
+                              colour=color)
         await ctx.send(embed=embed)
 
 

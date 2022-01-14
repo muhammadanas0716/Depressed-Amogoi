@@ -1,8 +1,8 @@
-Welcome to the DEPREESEDEST server - Lorem Ipsum! Here I the bot of the server will help you stay DEPRESSED.
+Welcome to the DEPREESEDEST server - DEPRESSED Lorem Ipsum! Here I the bot of the server will help you to stay DEPRESSED.
 1. I can help you with all kinds of DEPRESSING stuff!
 2. Our bot prefix is `dp` so before running any command use the prefix first.
-3. Talking of commands run `!commands` to see all available commands.
-4. Please use the all DEPRESSED commands in their specific DEPRESSED channels so everything stays organised.
+3. Talking of commands run `dp help` to see all available commands.
+4. Please use the all DEPRESSED commands in their specific DEPRESSED channels so everything stays DEPRESSINGLY organised.
 
 Enjoy your stay and stay DEPRESSED,
-Muhammad Anas!!!
+DP M.A!!!

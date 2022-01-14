@@ -17,3 +17,17 @@ class Meme(commands.Cog):
                 meme = await r.json()
                 embed.set_image(url=meme['data']['children'][random.randint(0, 25)]['data']['url'])
                 await ctx.send(embed=embed)
+
+
+
+class Joke(commands.Cog):
+    def __init__(self, client):
+        self.client = client
+
+
+
+
+
+def setup(client):
+    client.add_cog(Meme(client))
+    client.add_cog(Joke(client))

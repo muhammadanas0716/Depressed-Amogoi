@@ -9,9 +9,11 @@ intents.members = True
 
 # Initializing client object and setting up command prefix, as well as GLOBAL VARIABLES
 client = commands.Bot(command_prefix="dp ", intents=intents)
-error_message = """You aren't a DEPRESSED admin. If you are, you might have typed something incorrect. Contact <@814466820735631400> for details!"""
+client.remove_command("help")
+error_message = """You aren't a DEPRESSED admin. If you are, you might have typed something incorrect. Contact <@814466820735631400> for further details!"""
 owner = "<@814466820735631400>"
-admin_users = ["<@814466820735631400>"]
+admin_users = ["<@814466820735631400>"]  # ME
+color = "0x481C3C"
 
 
 # On Ready Command
@@ -33,12 +35,15 @@ async def on_member_join(member):
 
 # Show number of Users in Server
 @client.command()
-async def users(ctx):
+async def stats(ctx):
     # Doesn't Include Bots
     true_member_count = len([m for m in ctx.guild.members if not m.bot])
     embed = discord.Embed(title="Member Count....",
-                          description=f"We have **{true_member_count}** DEPRESSED users, excluding bots",
-                          color=0x481C3C)
+                          description=f"""
+                          **USERS:** We have **{true_member_count}** DEPRESSED users.
+                          **Server Admins:** We have {len(admin_users)} admins.
+                          """,
+                          color=color)
 
     await ctx.send(embed=embed)
 
@@ -55,17 +60,17 @@ async def rules(ctx):
     with open("commands/rules.txt") as f:
         all_rules = f.read()
     embed = discord.Embed(
-        title="Rules", description=all_rules, color=0x481C3C)
+        title="Rules", description=all_rules, color=color)
     await ctx.send(embed=embed)
 
 
 # Show all available commands
 @client.command()
-async def commands(ctx):
+async def help(ctx):
     with open("commands/all_commands.txt") as f:
         all_commands = f.read()
     embed = discord.Embed(title="All Commands",
-                          description=all_commands, color=0x481C3C)
+                          description=all_commands, color=color)
     await ctx.send(embed=embed)
 
 

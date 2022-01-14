@@ -3,6 +3,7 @@ import asyncio
 import discord
 from discord.ext import commands
 from datetime import date, datetime
+from main import color
 
 class Work(commands.Cog):
     def __init__(self, client):
@@ -14,7 +15,7 @@ class Work(commands.Cog):
         with open("commands/classwork.txt") as f:
             classwork = f.read()
             embed = discord.Embed(
-                title=f"Classwork - {date.today()}", description=classwork, color=0x481C3C)
+                title=f"Classwork - {date.today()}", description=classwork, color=color)
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -30,7 +31,7 @@ class Work(commands.Cog):
         with open("commands/homework.txt") as f:
             homework = f.read()
             embed = discord.Embed(
-                title=f"Homework - {date.today()}", description=homework, color=0x481C3C)
+                title=f"Homework - {date.today()}", description=homework, color=color)
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -45,7 +46,7 @@ class Work(commands.Cog):
         print(f"Reminder: {reminder}")
         print(f"Time: {time}")
         print(f"By: {ctx.author}")
-        embed = discord.Embed(color=0x481C3C, timestamp=datetime.utcnow())
+        embed = discord.Embed(color=color, timestamp=datetime.utcnow())
         seconds = 0
         if reminder is None:
             embed.add_field(name='Warning',
