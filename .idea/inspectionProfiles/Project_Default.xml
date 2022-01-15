@@ -1,0 +1,48 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyArgumentListInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyGlobalUndefinedInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+          <option value="E401" />
+          <option value="E712" />
+          <option value="E225" />
+          <option value="E301" />
+          <option value="E303" />
+          <option value="E701" />
+          <option value="E122" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="id" />
+          <option value="type" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStringFormatInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnboundLocalVariableInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="main.models.Item.objects" />
+          <option value="main.MyClient.author" />
+          <option value="main.MyClient.content" />
+          <option value="main.cogs.casual.Remove.channel" />
+          <option value="main.cogs.casual.Remove.message" />
+          <option value="main.cogs.casual.Remove.send" />
+          <option value="main.cogs.casual.Casual.send" />
+          <option value="main.cogs.casual.Casual.message" />
+          <option value="main.cogs.casual.Casual.channel" />
+          <option value="float.round" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
