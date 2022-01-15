@@ -1,5 +1,6 @@
 # Importing Modules
 import os
+from pydoc import cli
 import discord
 from discord.ext import commands
 
@@ -30,6 +31,26 @@ async def on_member_join(member):
         lines = f.read()
     await member.send(f"{member.mention}, {lines}")
     print("Done!")
+
+
+# Help Command
+@client.command()
+async def help(ctx):
+    with open("commands/help.txt") as f:
+        all_commands = f.read()
+    embed = discord.Embed(title="All Available Commands",
+                            description=all_commands, color=color)
+    await ctx.send(embed=embed)
+
+# Rules Command
+@client.command()
+async def rules(ctx):
+    with open("commands/rules.txt") as f:
+        all_rules = f.read()
+    embed = discord.Embed(
+        title="Rules", description=all_rules, color=color)
+    await ctx.send(embed=embed)
+
 
 
 # /\/\/\/\/\/ *****IMPORTING AND USING COGS ***** /\/\/\/\/\/

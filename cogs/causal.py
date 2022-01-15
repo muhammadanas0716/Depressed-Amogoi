@@ -34,25 +34,6 @@ class CasualCommands(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    # Help Command
-    @commands.command()
-    async def help(self, ctx):
-        with open("help.text") as f:
-            all_commands = f.read()
-        embed = discord.Embed(title="All Available Commands",
-                              description=all_commands, color=color)
-        await ctx.send(embed=embed)
-
-    # Rules Command
-    @commands.command()
-    async def rules(self, ctx):
-        with open(os.path("commands", "rules.txt")) as f:
-            all_rules = f.read()
-        embed = discord.Embed(
-            title="Rules", description=all_rules, color=color)
-        await ctx.send(embed=embed)
-
-
 
 def setup(client):
     client.add_cog(CasualCommands(client))
