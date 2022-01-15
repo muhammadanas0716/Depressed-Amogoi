@@ -1,4 +1,4 @@
-**Below are the available commands for the DEPRESSED bot, some are reserved for DEPRESSED admin(s) only, DM me if you want to try out the premium commands...**
+Below are the available commands for the DEPRESSED bot, some are reserved for DEPRESSED admin(s) only, DM me if you want to try out the premium commands...
 
 **BOT PREFIX:** `dp`
 
@@ -16,4 +16,5 @@
 `1. add @user **(MAKE ADMIN)**`, `2. remove @user **(REMOVE ADMIN)**`, 
 `3. kick @user`, `4. ban @user [reason]`, `5. unban @user [reason]`,
 `6. clear NumberOfMessages`
-`7, update_homework **updated_homework**` `8, update_classwork **updated_classwork**`
+`7, update_homework **updated_homework**`,
+`8, update_classwork **updated_classwork**`
