@@ -12,7 +12,6 @@ client = commands.Bot(command_prefix="dp ", intents=intents)
 client.remove_command("help")
 error_message = """You aren't a DEPRESSED admin. If you are, you might have typed something incorrect. Contact <@814466820735631400> for further details!"""
 owner = "<@814466820735631400>"
-admin_users = ["<@814466820735631400>"]  # ME
 color = 0x481C3C
 
 
@@ -36,12 +35,10 @@ async def on_member_join(member):
 # Show Stats of server
 @client.command()
 async def stats(ctx):
-    # Doesn't Include Bots
     true_member_count = len([m for m in ctx.guild.members if not m.bot])
-    embed = discord.Embed(title="Member Count....",
+    embed = discord.Embed(title="Lorem Ipsum Stats....",
                           description=f"""
                           **USERS:** We have **{true_member_count}** DEPRESSED users.
-                          **Server Admins:** We have {len(admin_users)} admins.
                           """,
                           color=color)
 
