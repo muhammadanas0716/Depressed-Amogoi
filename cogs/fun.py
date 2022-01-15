@@ -52,7 +52,7 @@ class Fun(commands.Cog):
                 link = res["postLink"]
                 memes = discord.Embed(description=f"[{title}]({link})", colour=color)
                 memes.set_image(url=res["url"])
-                memes.set_footer(text=f"👍 : {ups}")
+                memes.set_footer(text=f"👍 : {ups}" f"✍: {author}")
             return memes
 
         components = [
