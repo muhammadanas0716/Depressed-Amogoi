@@ -37,7 +37,7 @@ class CasualCommands(commands.Cog):
     # Help Command
     @commands.command()
     async def help(self, ctx):
-        with open(os.path("commands", "help.txt")) as f:
+        with open("help.text") as f:
             all_commands = f.read()
         embed = discord.Embed(title="All Available Commands",
                               description=all_commands, color=color)
