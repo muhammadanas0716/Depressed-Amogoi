@@ -30,7 +30,7 @@ class CasualCommands(commands.Cog):
         embed.set_thumbnail(url=icon)
         embed.add_field(name="Owner", value=owner, inline=True)
         embed.add_field(name="Server ID", value=id, inline=True)
-        embed.add_field(name="Member Count", value=memberCount, inline=True)
+        embed.add_field(name="Member Count", value=memberCount, inline=False)
 
         await ctx.send(embed=embed)
 
