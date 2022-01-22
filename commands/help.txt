@@ -7,7 +7,10 @@ Below are the available commands for the DEPRESSED bot, some are reserved for DE
 
 `4. homework`, `5. classwork`,
 
-`6. meme`, `7. joke`
+`6. meme`, `7. joke`, 
+
+** Music Commands - available to everybody - You have to be joined in some VC to use it!**
+`1. play _URL_`, `2. stop`
 
 ** Mathematics Commands - available to everybody **
 `1. calc small_equation`,
@@ -17,12 +20,10 @@ Below are the available commands for the DEPRESSED bot, some are reserved for DE
 `3. trigonometry_symbol(sin, cos, tan etc.) number`
 
 ** Administrator commands - only available to admins **
-`1. add @user **(MAKE ADMIN)**`, `2. remove @user **(REMOVE ADMIN)**`, 
+`1. kick @user`, `2. ban @user [reason]`, `3. unban @user [reason]`,
 
-`3. kick @user`, `4. ban @user [reason]`, `5. unban @user [reason]`,
+`4. clear NumberOfMessages`
 
-`6. clear NumberOfMessages`
+`5, update_homework **updated_homework**`,
 
-`7, update_homework **updated_homework**`,
-
-`8, update_classwork **updated_classwork**`
+`6, update_classwork **updated_classwork**`

@@ -43,7 +43,7 @@ async def help(ctx):
     await ctx.send(embed=embed)
 
 # Rules Command
-@client.command()
+@client.command(help="Rules command")
 async def rules(ctx):
     with open("commands/rules.txt") as f:
         all_rules = f.read()
