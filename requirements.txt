@@ -13,3 +13,5 @@ aiohttp~=3.7.4.post0
 numpy
 sympy
 matplotlib
+discord_components
+tk

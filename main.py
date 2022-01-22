@@ -27,7 +27,7 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     print(f"{member} has hopped into the server")
-    with open("cogs/commands/welcome.txt", "r") as f:
+    with open("commands/welcome.txt", "r") as f:
         lines = f.read()
     await member.send(f"{member.mention}, {lines}")
     print("Done!")
