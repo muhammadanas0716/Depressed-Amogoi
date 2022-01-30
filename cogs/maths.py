@@ -3,8 +3,8 @@ import math
 import discord
 import numpy as np
 from discord.ext import commands
-from sympy import N
 from main import color
+from sympy import N
 
 
 class Trignometry(commands.Cog):
