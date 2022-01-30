@@ -58,9 +58,6 @@ for filename in os.listdir("./cogs"):
         client.load_extension(f"cogs.{filename[:-3]}")
 
 
-for folder in os.listdir("modules"):
-    if os.path.exists(os.path.join("modules", folder, "cog.py")):
-        client.load_extension(f"modules.{folder}.cog")
 
 # Run the Bot
 client.run("ODkwNDk4MjY2Nzg4MTYzNjE2.YUwrIw.xNerKpVeZeHElD4UKJqTTordWY0")
