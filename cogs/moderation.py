@@ -1,4 +1,4 @@
-from click import command
+
 import discord
 from discord.ext import commands
 

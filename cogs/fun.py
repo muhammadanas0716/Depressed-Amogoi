@@ -1,5 +1,4 @@
 import asyncio
-from click import command
 import discord
 import json
 import random
@@ -132,7 +131,7 @@ class Meme(commands.Cog):
             else:
                 await interaction.send("Hey! This is not for you!")
 
-class Joke(commands.Cog)
+class Joke(commands.Cog):
     def __init__(self, client):
         self.client = client
 
