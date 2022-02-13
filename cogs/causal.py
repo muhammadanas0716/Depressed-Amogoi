@@ -14,7 +14,7 @@ class CasualCommands(commands.Cog):
     @commands.command()
     async def stats(self, ctx):
         name = str(ctx.guild.name)
-        description = "A Construction Site for Depressed Bots 🤖"
+        description = "A Construction Site for Depressing Bots 🤖"
 
         owner = OWNER
         id = str(ctx.guild.id)
