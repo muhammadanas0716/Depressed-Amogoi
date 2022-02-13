@@ -1,4 +1,4 @@
-from turtle import color
+from datetime import datetime
 from discord.ext import commands
 from matplotlib.pyplot import title
 import requests, json, discord
@@ -34,7 +34,8 @@ class Weather(commands.Cog):
             embed = discord.Embed(
                 title="Weather Forcast",
                 description=description,
-                color=color
+                color=color,
+                timestamp=datetime.utcnow()
             )
             icon="https://www.timeanddate.com/scripts/weather_og.php?h1=Weather&h2=Local%20Weather%20Around%20the%20World"
             embed.set_thumbnail(url=icon)

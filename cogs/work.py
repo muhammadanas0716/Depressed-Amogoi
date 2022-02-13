@@ -15,7 +15,7 @@ class Work(commands.Cog):
         with open("commands/classwork.txt") as f:
             classwork = f.read()
             embed = discord.Embed(
-                title=f"Classwork - {date.today()}", description=classwork, color=color)
+                title=f"Classwork - {date.today()}", description=classwork, color=color, timestamp=datetime.utcnow())
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -31,7 +31,7 @@ class Work(commands.Cog):
         with open("commands/homework.txt") as f:
             homework = f.read()
             embed = discord.Embed(
-                title=f"Homework - {date.today()}", description=homework, color=color)
+                title=f"Homework - {date.today()}", description=homework, color=color, timestamp=datetime.utcnow())
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -66,9 +66,9 @@ class Work(commands.Cog):
         if seconds == 0:
             embed.add_field(name='Warning',
                             value='Please specify a proper duration, send `reminder_help` for more information.')
-        elif seconds < 0:
+        elif seconds < 1:
             embed.add_field(name='Warning',
-                            value='You have specified a too short duration!\nMinimum duration is 5 minutes.')
+                            value='You have specified a too short duration!\n Minimum duration is 1 seconds.')
         elif seconds > 7776000:
             embed.add_field(name='Warning',
                             value='You have specified a too long duration!\nMaximum duration is 90 days.')

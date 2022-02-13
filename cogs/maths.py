@@ -1,3 +1,4 @@
+from datetime import datetime
 import math
 
 import discord
@@ -6,6 +7,9 @@ from discord.ext import commands
 from main import color
 from sympy import N
 
+import matplotlib.pyplot as plt 
+import numpy as np 
+import discord
 
 class Trignometry(commands.Cog):
     def __init__(self, client):
@@ -48,10 +52,32 @@ class Calc(commands.Cog):
     async def calc(self, ctx, arg):
         answer = N(arg)
         ans = np.format_float_positional(answer, trim='-')
-        embed = discord.Embed(title='{0} = {1}'.format(arg, ans), color=color)
+        embed = discord.Embed(title='{0} = {1}'.format(arg, ans), color=color, timestamp=datetime.utcnow())
         await ctx.send(embed=embed)
+
+class BarGraph(commands.Cog):
+        def __init__(self, client):
+            self.client = client
+
+        @commands.command() 
+        async def create_score_bargraph(ctx, percentage_list, votes_list):   
+            x_labels = ['1','2','3','4','5','6','7','8','9','10']
+
+            fig = plt.figure()
+            ax = fig.add_axes([0,0,1,1])
+            ax.bar(x_labels, votes_list)
+
+            filename =  "test.png"
+            plt.savefig(filename)
+            image = discord.File(filename)
+
+            await ctx.send(file = image)
+
+            plt.close()
+
 
 
 def setup(client):
     client.add_cog(Trignometry(client))
     client.add_cog(Calc(client))
+    client.add_cog(BarGraph(client))

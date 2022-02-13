@@ -20,7 +20,7 @@ class CasualCommands(commands.Cog):
         id = str(ctx.guild.id)
         memberCount = str(ctx.guild.member_count)
 
-        icon = str(ctx.guild.icon_url)
+        icon = ctx.guild.icon_url
 
         embed = discord.Embed(
             title=name + " Server Information",

@@ -1,4 +1,5 @@
 # Importing Modules
+from datetime import datetime
 import os
 import discord
 from discord.ext import commands
@@ -38,7 +39,7 @@ async def help(ctx):
     with open("commands/help.txt") as f:
         all_commands = f.read()
     embed = discord.Embed(title="All Available Commands",
-                            description=all_commands, color=color)
+                            description=all_commands, color=color, timestamp=datetime.utcnow())
     await ctx.send(embed=embed)
 
 # Rules Command
@@ -47,7 +48,7 @@ async def rules(ctx):
     with open("commands/rules.txt") as f:
         all_rules = f.read()
     embed = discord.Embed(
-        title="Rules", description=all_rules, color=color)
+        title="Rules", description=all_rules, color=color, timestamp=datetime.utcnow())
     await ctx.send(embed=embed)
 
 

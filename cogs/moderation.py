@@ -1,4 +1,5 @@
 
+from datetime import datetime
 import discord
 from discord.ext import commands
 
@@ -16,7 +17,7 @@ class Kick(commands.Cog):
         **Kicked Member Name:** {member.mention} \n
         **Kicked By Member Name:** {ctx.author.mention} \n
         **Reason:** {reason}
-        """, color=color)
+        """, color=color, timestamp=datetime.utcnow())
         await ctx.send(embed=embed)
         await member.kick(reason=reason)
 
@@ -25,12 +26,12 @@ class Kick(commands.Cog):
         if isinstance(error, commands.MissingPermissions):
             embed = discord.Embed(title="Permission Error.",
                                   description=f"You don't have the permission to kick members, contact {OWNER} for further Details.",
-                                  colour=color)
+                                  colour=color, timestamp=datetime.utcnow())
             await ctx.send(embed=embed)
         if isinstance(error, commands.MissingRequiredArgument):
             embed = discord.Embed(title="Missed Requeired Argument.",
                     description=f"You have missed a requeried argument, please specify the user you want to kick.",
-                    colour=color)
+                    colour=color, timestamp=datetime.utcnow())
             await ctx.send(embed=embed)
 
 ########## BAN COMMAND ##########
@@ -45,7 +46,7 @@ class Ban(commands.Cog):
         **Banned Member Name:** {member.mention} \n
         **Banned By Member Name:** {ctx.author.mention} \n
         **Reason:** {reason}
-        """, color=color)
+        """, color=color, timestamp=datetime.utcnow())
         await ctx.send(embed=embed)
         await member.ban(reason=reason)
 
@@ -54,12 +55,12 @@ class Ban(commands.Cog):
         if isinstance(error, commands.MissingPermissions):
             embed = discord.Embed(title="Permission Error.",
                                   description=f"You don't have the permission to ban members, contact {OWNER} for further Details.",
-                                  colour=color)
+                                  colour=color, timestamp=datetime.utcnow())
             await ctx.send(embed=embed)
         if isinstance(error, commands.MissingRequiredArgument):
             embed = discord.Embed(title="Missed Requeired Argument.",
                     description=f"You have missed a requeried argument, please specify the user you want to ban.",
-                    colour=color)
+                    colour=color, timestamp=datetime.utcnow())
             await ctx.send(embed=embed)
 
 ########## UNBAN COMMAND ##########
@@ -79,7 +80,7 @@ class Unban(commands.Cog):
                 embed = discord.Embed(title="Member Unbanned", description=f"""
                 **Unbanned Member Name:** {member} \n
                 **Unbanned By Member Name:** {ctx.author.mention} \n
-                """, color=color)
+                """, color=color, timestamp=datetime.utcnow())
                 await ctx.guild.unban(user)
                 await ctx.send(embed=embed)
 
@@ -89,13 +90,13 @@ class Unban(commands.Cog):
         if isinstance(error, commands.MissingPermissions):
             embed = discord.Embed(title="Permission Error.",
                                   description=f"You don't have the permission to unban members, contact {OWNER} for further Details.",
-                                  colour=color)
+                                  colour=color, timestamp=datetime.utcnow())
             await ctx.send(embed=embed)
         if isinstance(error, commands.MissingRequiredArgument):
             embed = discord.Embed(title="Missed Requeired Argument.",
                     description=f"You have missed a requeried argument, please specify the user you want to unban, (DEPRESSED#0000)",
-                    colour=color)
-            await ctx.send(embed=embed)
+                    colour=color, timestamp=datetime.utcnow())
+            await ctx.send(embed=embed, timestamp=datetime.utcnow())
 
 
 ########## CLEAR COMMAND ##########                             
@@ -112,7 +113,7 @@ class Clear(commands.Cog):
         if isinstance(error, commands.MissingPermissions):
             embed = discord.Embed(title="Permission Error.",
                                   description=f"You don't have the permission to manange messages, contact {OWNER} for further Details",
-                                  colour=color)
+                                  colour=color, timestamp=datetime.utcnow())
             await ctx.send(embed=embed)
 
 

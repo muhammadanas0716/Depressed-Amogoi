@@ -7,7 +7,7 @@ Below are the available commands for the DEPRESSED bot, some are reserved for DE
 
 `4. homework`, `5. classwork`,
 
-`6. meme`, `7. joke`, 
+`6. meme`, `7. joke`, `8. weather CITY`
 
 ** Music Commands - available to everybody - You have to be joined in some VC to use it!**
 `1. play _URL_`, `2. stop`
