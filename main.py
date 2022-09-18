@@ -5,8 +5,7 @@ import discord
 from discord.ext import commands
 
 # Loading Intents
-intents = discord.Intents.default()
-intents.members = True
+intents = discord.Intents().all()
 
 # Initializing client object and setting up command prefix, as well as GLOBAL VARIABLES
 client = commands.Bot(command_prefix="dp ", intents=intents)
@@ -60,5 +59,6 @@ for filename in os.listdir("./cogs"):
 
 
 
+
 # Run the Bot
-client.run("ODkwNDk4MjY2Nzg4MTYzNjE2.YUwrIw.xNerKpVeZeHElD4UKJqTTordWY0")
+client.run("ODkwNDk4MjY2Nzg4MTYzNjE2.GUWgEd.Gzp3CwGm53_gmA_TQXTroQ6rCxQnj_CY1Ec1zM")
