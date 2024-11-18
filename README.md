@@ -79,5 +79,5 @@ ETC...
 
 For support, email mrwhosetheboss365@gmail.com.
 
-Copyright (c) 2022 ~ [Muhammad Anas](https://muhammadanas.herokuapp.com/index.html)
+Copyright (c) 2020 ~ [Muhammad Anas](https://muhammadanas.herokuapp.com/index.html)
 
